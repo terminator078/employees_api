@@ -1,0 +1,9 @@
+json.call(
+  employee,
+  :id,
+  :name,
+  :email,
+  :mobile,
+  :role,
+  :team_number
+)
