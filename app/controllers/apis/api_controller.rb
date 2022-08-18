@@ -19,8 +19,11 @@ def decode(token)
   rescue JWT::ExpiredSignature, JWT::VerificationError, JWT::DecodeError
     head :unauthorized
   end
-
+  if data.present?
   data[0]
+  else
+    head :unauthorized
+  end
 end
 
 def match_credentials(email, password)
