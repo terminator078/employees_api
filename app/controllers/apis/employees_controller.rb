@@ -3,7 +3,7 @@ class Apis::EmployeesController < Apis::ApiController
 
     def index
       if is_authorized(permitted_params[:id])
-      @employees = Employee.order('created_at')
+      @employees = Employee.order('team_number')
       @tasks = {}
       @employees.each do |employee|
         @tasks[employee.id] = Task.where(employee_id: employee.id)
