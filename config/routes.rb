@@ -4,6 +4,6 @@ Rails.application.routes.draw do
     resources :login, only: %i(index)
     resources :logout, only: %i(index)
     resources :register, only: %i(create)
-    resources :tasks, only: %i(create update delete)
+    resources :tasks, only: %i(create update destroy)
   end
 end
